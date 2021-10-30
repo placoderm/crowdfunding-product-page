@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "Commissioner";
+    src: url("./fonts/Commissioner-Regular.ttf");
+    font-weight: regular;
+}
+
+@font-face {
+    font-family: "Commissioner";
+    src: url("./fonts/Commissioner-Bold.ttf");
+    font-weight: bold;
+}
+
+p {
+    color: hsl(0, 0%, 48%);
+}
+
+* {
+    font-family: Commissioner;
+}
+
+section#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/image-hero-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+}
+
+h1,
+p.sub-head {
+    text-align: center;
+    font-weight: 900;
+}
+
+article {
+    width: 70%;
+    margin: auto;
+}
+
+section.main-card {
+    /* background-color: bisque !important; */
+    border: solid 1px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+
+/* status area */
+
+#status-section {
+    display: flex;
+}
+
+.status-card {
+    padding: 2rem;
+    border-left: solid 1px gainsboro;
+}
+
+.number {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+button {
+    background-color: hsl(176, 50%, 47%);
+    padding: 1rem;
+    border-radius: 25px;
+    border-width: 0px;
+    color: white;
+}
+
+button#bookmark {
+    background-color: lightgray;
+}
+
+
+/* 
+pledge cards */
+
+.pledge-amount {
+    color: hsl(176, 50%, 47%);
+    font-weight: bold;
+}
+
+.remaining-count {
+    display: flex;
+    align-items: center;
+}
+
+.pledge-card-footer .number {
+    margin-right: 0.5rem;
+}
+
+div.pledge-card {
+    /* background-color: lavender; */
+    border: solid 1px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+.pledge-card-footer,
+.pledge-card-header,
+.heading-footer,
+.pledge-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    border: solid 1px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pledge-card-modal {
+    border: solid 1px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+.selected {
+    border-color: hsl(176, 50%, 47%) !important;
+    border-width: 3px !important;
+}
+
+.selected .modal-pledge-card-footer {
+    display: flex !important;
+}
+
+.modal-pledge-card-footer {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px gray;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+input.pledge-input {
+    padding: 1rem;
+    border: solid 1px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.out-of-stock p,
+.out-of-stock h3,
+.out-of-stock h4,
+.out-of-stock .number {
+    color: rgb(235, 235, 235);
+}
+
+.out-of-stock .pledge-amount {
+    color: hsl(176, 50%, 87%);
+}
+
+.out-of-stock {
+    border-color: rgb(235, 235, 235);
+}
+
+button.out-of-stock {
+    background-color: rgb(200, 218, 241);
+}
+
+
+/* success */
+
+div#success * {
+    text-align: center;
+    margin: auto;
+}
+
+div#success button {
+    margin: auto;
+}
