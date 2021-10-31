@@ -10,6 +10,10 @@
     font-weight: bold;
 }
 
+body {
+    margin: 0;
+}
+
 p {
     color: hsl(0, 0%, 48%);
 }
@@ -18,14 +22,41 @@ p {
     font-family: Commissioner;
 }
 
-section#hero {
+#logo {
+    margin: 30px 0px 0px 100px;
+}
+
+#navbar {
+    padding-top: 30px;
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav {
+    padding-right: 100px;
+}
+
+nav ul {
+    list-style: none;
+    color: white;
+}
+
+nav ul li {
+    display: inline;
+}
+
+#hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/image-hero-desktop.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
-    height: 10%;
+    /* position: absolute; */
+    min-height: 300px;
     width: 100%;
+    z-index: -1;
 }
 
 h1,
@@ -34,13 +65,15 @@ p.sub-head {
     font-weight: 900;
 }
 
-article {
+#main {
     width: 70%;
     margin: auto;
+    z-index: 2;
+    margin-top: -3rem;
 }
 
-section.main-card {
-    /* background-color: bisque !important; */
+.main-card {
+    background-color: white;
     border: solid 1px;
     border-radius: 10px;
     margin-top: 1rem;

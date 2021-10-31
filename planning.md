@@ -5,6 +5,8 @@ click on "select reward" button should
 - open modal
 - select the correct card for the select reward button
 
+should not be able to enter anythign except a number
+
 ## pledge submission click
 
 submit the value in the field
