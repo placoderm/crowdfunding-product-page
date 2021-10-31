@@ -45,7 +45,7 @@
         <section id="status-section" class="main-card">
 
             <div class="status-card">
-                <div class="number">$89,914</div>
+                <div id="total-pledged" class="number"></div>
                 <p>of $100,000 backed</p>
             </div>
             <div class="status-card">
@@ -157,9 +157,10 @@
                             <div class="modal-pledge-card-footer">
 
                                 <p>Enter your pledge</p>
-                                <div class="modal-pledge-form">
-                                    <input class="pledge-input" value="25"> <button>Continue</button>
-                                </div>
+                                <form class="modal-pledge-form">
+                                    <input id="submission-amount" class="pledge-input" value="25">
+                                    <button>Continue</button>
+                                </form>
                             </div>
                             <!-- Selected pledge end -->
                         </div>
@@ -213,13 +214,16 @@
 
                 </div>
                 <div id="success" class="modal">
-                    <!-- Success modal start -->
-                    <img src="./images/icon-check.svg" alt="">
+                    <div class="success-content">
 
-                    <h4>Thanks for your support!</h4>
-                    <div id="thankyou-message">
-                        <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
-                    </div> <button>Got it!</button>
+                        <!-- Success modal start -->
+                        <img src="./images/icon-check.svg" alt="">
+
+                        <h4>Thanks for your support!</h4>
+                        <div id="thankyou-message">
+                            <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
+                        </div> <button class="close-success">Got it!</button>
+                    </div>
 
                 </div>
             </section>
