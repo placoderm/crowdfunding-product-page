@@ -83,7 +83,7 @@ p.sub-head {
 
 /* status area */
 
-#status-section {
+#status-numbers-area {
     display: flex;
 }
 
@@ -95,6 +95,21 @@ p.sub-head {
 .number {
     font-size: 2rem;
     font-weight: bold;
+}
+
+.progress-bar-foreground {
+    color: #fff !important;
+    background-color: hsl(176, 72%, 28%);
+    height: 14px;
+    border-radius: 25px;
+}
+
+.progress-bar-background {
+    color: #000 !important;
+    background-color: #f1f1f1 !important;
+    margin-top: 1rem;
+    border-radius: 25px;
+    /* border: solid; */
 }
 
 button {
@@ -111,6 +126,32 @@ button:hover {
 
 button#bookmark {
     background-color: lightgray;
+}
+
+.fake-radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-button {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    /* background-color: lightgray; */
+    border-radius: 50px;
+}
+
+.radio-button-outline {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    border: solid lightgray 2px;
+    border-radius: 50px;
+}
+
+.pledge-card-modal.selected .radio-button {
+    background-color: hsl(176, 72%, 28%);
 }
 
 

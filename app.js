@@ -3,7 +3,9 @@ let bambooLeft = 101,
     blackLeft = 64,
     mahoganyLeft = 0,
     totalPledged = 89914,
-    totalPledgers = 5007;
+    totalPledgers = 5007,
+    pledgePercentage = Math.floor(totalPledged / 1000);
+console.log(pledgePercentage);
 
 const bambooCountArea = document.querySelector("#bambooCountArea"),
     bambooCountArea2 = document.querySelector("#bambooCountArea2"), //fix area2
@@ -12,7 +14,8 @@ const bambooCountArea = document.querySelector("#bambooCountArea"),
     mahoganyCountArea = document.querySelector("#mahoganyCountArea"),
     mahoganyCountArea2 = document.querySelector("#mahoganyCountArea2"),
     totalPledgedArea = document.querySelector("#total-pledged"),
-    totalPledgersArea = document.querySelector("#total-pledgers-area");
+    totalPledgersArea = document.querySelector("#total-pledgers-area"),
+    progressBar = document.querySelector("#progress-bar-foreground");
 
 bambooCountArea.textContent = bambooLeft;
 bambooCountArea2.textContent = bambooLeft;
@@ -22,6 +25,7 @@ mahoganyCountArea.textContent = mahoganyLeft;
 mahoganyCountArea2.textContent = mahoganyLeft;
 totalPledgedArea.textContent = totalPledged.toLocaleString("en-US");
 totalPledgersArea.textContent = totalPledgers.toLocaleString("en-US");
+progressBar.style.width = pledgePercentage + "%";
 
 // add pledege amount to total------BROKEN
 
@@ -30,7 +34,10 @@ function addPledgeAmountToTotal(amountToAdd) {
     totalPledgedArea.textContent = totalPledged.toLocaleString("en-US");
     totalPledgers++;
     totalPledgersArea.textContent = totalPledgers.toLocaleString("en-US");
+    pledgePercentage = Math.floor(totalPledged / 1000);
+    progressBar.style.width = pledgePercentage + "%";
     console.log(typeof totalPledged, totalPledged);
+    console.log(pledgePercentage);
 }
 
 // Back this button
