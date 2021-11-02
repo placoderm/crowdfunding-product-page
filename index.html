@@ -24,9 +24,13 @@
             <nav>
 
                 <ul>
-                    <li>About</li>
-                    <li>Discover</li>
-                    <li>Get Started</li>
+                    <li><a href="#about">About</a></li>
+                    <li>
+                        <a href="#about">Discover</a>
+                    </li>
+                    <li>
+                        <a href="#about">Get Started</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -34,6 +38,10 @@
     <!-- end navbar-->
     <div id="main">
         <div id="heading" class="main-card">
+            <div class="logo-div">
+
+                <img class="round-logo" src="./images/logo-mastercraft.svg" alt="">
+            </div>
 
             <h1 class="main-heading">
                 Mastercraft Bamboo Monitor Riser
@@ -42,14 +50,20 @@
                 <p class="sub-head">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
             </div>
             <div id="heading-buttons">
-                <div class="heading-footer"><button id="btnBackProject">Back this project</button> <button id="bookmark">Bookmark</button>
+                <div class="heading-footer"><button id="btnBackProject">Back this project</button> <button id="bookmark"><span class="bookmark-toggle"><svg width="56" height="56"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g fill="none" fill-rule="evenodd">
+                                    <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+                                    <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+                                </g>
+                            </svg></span></span><span class="bookmark-button-label">Bookmark</span></button>
                 </div>
             </div>
         </div>
         <div id="status-section" class="main-card">
             <div id="status-numbers-area">
 
-                <div class="status-card">
+                <div class="status-card left">
                     <div id="total-pledged" class="number"></div>
                     <p>of $100,000 backed</p>
                 </div>
@@ -67,6 +81,7 @@
             </div>
         </div>
         <div id="project-area">
+
             <div id="about" class="main-card">
 
                 <h2>About this project</h2>
@@ -134,45 +149,65 @@
 
                         <h3>Back this project</h3>
                         <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+
+
+
+
+
+                        <!-- START PLEDGE NO REWARD -->
                         <div class="pledge-card-modal">
-                            <div class="pledge-heading">
-                                <div class="fake-radio">
-                                    <div class="radio-button"></div>
-                                    <div class="radio-button-outline"></div>
-                                </div>
+
+                            <div class="fake-radio">
+                                <div class="radio-button"></div>
+                                <div class="radio-button-outline"></div>
+                            </div>
+                            <div class="pledge-title">
                                 <h4>Pledge with no reward</h4>
                             </div>
-                            <p>Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
+                            <div class="pledge-amount"></div>
+                            <div class="remaining-amount-area">
+
+                            </div>
+                            <div class="modal-pledge-card-description">
+
+                                <p>Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.
+                                </p>
+                            </div>
                             <!-- Selected pledge  start -->
                             <div class="modal-pledge-card-footer">
 
                                 <p>Enter your pledge</p>
-                                <div class="modal-pledge-form">
-                                    <input class="pledge-input" value="10"> <button>Continue</button>
-                                </div>
+                                <form class="modal-pledge-form">
+                                    <input id="submission-amount" class="pledge-input" value="10">
+                                    <button>Continue</button>
+                                </form>
                             </div>
                             <!-- Selected pledge end -->
                         </div>
+                        <!--end of  PLEDGE NO REWARD-->
+
+
                         <!-- START BAMBOO PLEDGE CARD -->
                         <div class="pledge-card-modal">
-                            <div class="pledge-heading">
-                                <div class="fake-radio">
-                                    <div class="radio-button"></div>
-                                    <div class="radio-button-outline"></div>
-                                </div>
-                                <h4>Bamboo Stand Pledge</h4>
-                                <div class="pledge-amount">$25 or more</div>
 
-                                <div class="remaining-count">
-                                    <div id="bambooCountArea2" class="number"></div>
-                                    <p>left</p>
-                                </div>
+                            <div class="fake-radio">
+                                <div class="radio-button"></div>
+                                <div class="radio-button-outline"></div>
                             </div>
-                            <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list. 101 left</p>
-
+                            <div class="pledge-title">
+                                <h4>Bamboo Stand Pledge</h4>
+                            </div>
+                            <div class="pledge-amount">$25 or more</div>
+                            <div class="remaining-amount-area">
+                                <span id="bambooCountArea2" class="number"></span>
+                                <p>left</p>
+                            </div>
+                            <div class="modal-pledge-card-description">
+                                <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.
+                                </p>
+                            </div>
                             <!-- Selected pledge  start -->
                             <div class="modal-pledge-card-footer">
-
                                 <p>Enter your pledge</p>
                                 <form class="modal-pledge-form">
                                     <input id="submission-amount" class="pledge-input" value="25">
@@ -181,58 +216,77 @@
                             </div>
                             <!-- Selected pledge end -->
                         </div>
+                        <!--end of Bamboo modal pledge card-->
 
+
+
+
+
+
+                        <!-- START Black Edition Stand -->
                         <div class="pledge-card-modal">
-                            <div class="pledge-heading">
-                                <div class="fake-radio">
-                                    <div class="radio-button"></div>
-                                    <div class="radio-button-outline"></div>
-                                </div>
+
+                            <div class="fake-radio">
+                                <div class="radio-button"></div>
+                                <div class="radio-button-outline"></div>
+                            </div>
+                            <div class="pledge-title">
                                 <h4>Black Edition Stand</h4>
-                                <div class="pledge-amount">Pledge $75 or more</div>
-                                <div class="remaining-count">
-                                    <div id="blackCountArea2" class="number"></div>
-                                    <p>left</p>
-                                </div>
                             </div>
-                            <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included. 64 left</p>
-
-                            <!-- Selected pledge start -->
-                            <div class="modal-pledge-card-footer">
-
-                                <p>Enter your pledge</p>
-                                <div class="modal-pledge-form">
-                                    <input class="pledge-input" value="75"> <button>Continue</button>
-                                </div>
+                            <div class="pledge-amount">$75 or more</div>
+                            <div class="remaining-amount-area">
+                                <span id="blackCountArea2" class="number"></span>
+                                <p>left</p>
                             </div>
-                            <!-- Selected pledge end -->
-                        </div>
-
-                        <div class="pledge-card-modal out-of-stock">
-                            <div class="pledge-heading">
-                                <div class="fake-radio">
-                                    <div class="radio-button"></div>
-                                    <div class="radio-button-outline"></div>
-                                </div>
-                                <h4>Mahogany Special Edition</h4>
-                                <div class="pledge-amount">Pledge $200 or more</div>
-                                <div class="remaining-count">
-                                    <div id="mahoganyCountArea2" class="number"></div>
-                                    <p>left</p>
-                                </div>
+                            <div class="modal-pledge-card-description">
+                                <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.
+                                </p>
                             </div>
-                            <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included. 0 left</p>
-
                             <!-- Selected pledge  start -->
                             <div class="modal-pledge-card-footer">
-
                                 <p>Enter your pledge</p>
-                                <div class="modal-pledge-form">
-                                    <input class="pledge-input" value="200"> <button>Continue</button>
-                                </div>
+                                <form class="modal-pledge-form">
+                                    <input id="submission-amount" class="pledge-input" value="75">
+                                    <button>Continue</button>
+                                </form>
                             </div>
                             <!-- Selected pledge end -->
                         </div>
+                        <!--end of Black Edition Stand modal pledge card-->
+
+
+                        <!-- START Mahogany Special Edition -->
+                        <div class="pledge-card-modal out-of-stock">
+
+                            <div class="fake-radio">
+                                <div class="radio-button"></div>
+                                <div class="radio-button-outline"></div>
+                            </div>
+                            <div class="pledge-title">
+                                <h4>Mahogany Special Edition</h4>
+                            </div>
+                            <div class="pledge-amount">$200 or more</div>
+                            <div class="remaining-amount-area">
+                                <span id="mahoganyCountArea2" class="number"></span>
+                                <p>left</p>
+                            </div>
+                            <div class="modal-pledge-card-description">
+                                <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.
+                                </p>
+                            </div>
+                            <!-- Selected pledge  start -->
+                            <div class="modal-pledge-card-footer">
+                                <p>Enter your pledge</p>
+                                <form class="modal-pledge-form">
+                                    <input id="submission-amount" class="pledge-input" value="200">
+                                    <button>Continue</button>
+                                </form>
+                            </div>
+                            <!-- Selected pledge end -->
+                        </div>
+                        <!--end of Black Edition Stand modal pledge card-->
+
+
 
                         <!-- Selection modal pledge end -->
                     </div>

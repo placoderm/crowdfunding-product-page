@@ -23,7 +23,7 @@ blackCountArea.textContent = blackLeft;
 blackCountArea2.textContent = blackLeft;
 mahoganyCountArea.textContent = mahoganyLeft;
 mahoganyCountArea2.textContent = mahoganyLeft;
-totalPledgedArea.textContent = totalPledged.toLocaleString("en-US");
+totalPledgedArea.textContent = "$ " + totalPledged.toLocaleString("en-US");
 totalPledgersArea.textContent = totalPledgers.toLocaleString("en-US");
 progressBar.style.width = pledgePercentage + "%";
 
@@ -31,11 +31,15 @@ progressBar.style.width = pledgePercentage + "%";
 
 function addPledgeAmountToTotal(amountToAdd) {
     totalPledged += parseInt(amountToAdd, 10);
-    totalPledgedArea.textContent = totalPledged.toLocaleString("en-US");
+    totalPledgedArea.textContent = "$ " + totalPledged.toLocaleString("en-US");
     totalPledgers++;
     totalPledgersArea.textContent = totalPledgers.toLocaleString("en-US");
     pledgePercentage = Math.floor(totalPledged / 1000);
-    progressBar.style.width = pledgePercentage + "%";
+    if (pledgePercentage > 100) {
+        progressBar.style.width = "100%";
+    } else {
+        progressBar.style.width = pledgePercentage + "%";
+    }
     console.log(typeof totalPledged, totalPledged);
     console.log(pledgePercentage);
 }

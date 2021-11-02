@@ -7,6 +7,15 @@ click on "select reward" button should
 
 should not be able to enter anythign except a number
 
+-[] make menu links work
+-[] everything mobile
+-[] bookmark button toggle.
+-[] fix verticle line in numbers pannel
+-[] select reward buttons should open to the proper modal card
+-[] add dollar sign in amount box
+-[] progress bar should not exceed 100
+-[] each pledge level remaining number shoudl decrement
+
 ## pledge submission click
 
 submit the value in the field

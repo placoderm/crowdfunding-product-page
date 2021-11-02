@@ -39,6 +39,15 @@ nav {
     padding-right: 100px;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 nav ul {
     list-style: none;
     color: white;
@@ -46,6 +55,7 @@ nav ul {
 
 nav ul li {
     display: inline;
+    margin-right: 2rem;
 }
 
 #hero {
@@ -59,10 +69,32 @@ nav ul li {
     z-index: -1;
 }
 
-h1,
-p.sub-head {
+.logo-div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -3.55rem;
+}
+
+.round-logo {}
+
+h1 {
     text-align: center;
     font-weight: 900;
+}
+
+h4 {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+h4:hover {
+    color: hsl(176, 72%, 28%);
+}
+
+p.sub-head {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 #main {
@@ -74,10 +106,10 @@ p.sub-head {
 
 .main-card {
     background-color: white;
-    border: solid 1px;
+    border: solid 1px hsl(0, 0%, 48%);
     border-radius: 10px;
     margin-top: 1rem;
-    padding: 2rem;
+    padding: 2rem 3rem 2rem 3rem;
 }
 
 
@@ -85,11 +117,23 @@ p.sub-head {
 
 #status-numbers-area {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .status-card {
-    padding: 2rem;
+    padding-left: 2rem;
+    margin: 2rem;
     border-left: solid 1px gainsboro;
+}
+
+.status-card.left {
+    border-left: none !important;
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+}
+
+.status-card p {
+    margin-bottom: 0px;
 }
 
 .number {
@@ -109,49 +153,37 @@ p.sub-head {
     background-color: #f1f1f1 !important;
     margin-top: 1rem;
     border-radius: 25px;
-    /* border: solid; */
 }
 
 button {
-    background-color: hsl(176, 50%, 47%);
+    background-color: hsl(176, 72%, 28%);
     padding: 1rem;
-    border-radius: 25px;
+    height: 57px;
+    border-radius: 50px;
     border-width: 0px;
     color: white;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: hsl(176, 72%, 28%);
+    background-color: hsl(176, 72%, 18%);
 }
 
 button#bookmark {
-    background-color: lightgray;
-}
-
-.fake-radio {
+    background-color: rgb(136, 136, 136);
+    padding: 0rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-right: 1rem;
 }
 
-.radio-button {
-    position: absolute;
-    height: 15px;
-    width: 15px;
-    /* background-color: lightgray; */
-    border-radius: 50px;
+.bookmark-button-label {
+    margin-left: 1rem;
+    display: inline-block;
 }
 
-.radio-button-outline {
-    position: relative;
-    height: 25px;
-    width: 25px;
-    border: solid lightgray 2px;
-    border-radius: 50px;
-}
-
-.pledge-card-modal.selected .radio-button {
-    background-color: hsl(176, 72%, 28%);
+span.bookmark-toggle {
+    padding: 0px;
 }
 
 
@@ -159,7 +191,7 @@ button#bookmark {
 pledge cards */
 
 .pledge-amount {
-    color: hsl(176, 50%, 47%);
+    color: hsl(176, 72%, 28%);
     font-weight: bold;
 }
 
@@ -174,7 +206,7 @@ pledge cards */
 
 div.pledge-card {
     /* background-color: lavender; */
-    border: solid 1px;
+    border: solid 1px hsl(0, 0%, 48%);
     border-radius: 10px;
     margin-top: 1rem;
     padding: 2rem;
@@ -222,9 +254,14 @@ div.modal {
     margin: 15% auto;
     /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid hsl(0, 0%, 48%);
     width: 70%;
     /* Could be more or less, depending on screen size */
+}
+
+.pledge-card-top {
+    display: flex;
+    align-items: flex-start;
 }
 
 
@@ -245,33 +282,155 @@ div.modal {
 }
 
 .pledge-card-modal {
-    border: solid 1px;
+    border: solid 1px hsl(0, 0%, 48%);
     border-radius: 10px;
     margin-top: 1rem;
     padding: 2rem;
+    background-color: skyblue;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 5fr 4fr 5fr;
+    grid-template-areas: "radio heading pledge remaining" ". description description description" "footer footer footer footer";
+    align-items: baseline;
+}
+
+@media only screen and (max-width: 375px) {
+    /* main page ---------------------------------------------------- */
+    #main {
+        width: 100%;
+        z-index: 2;
+        margin-top: -3rem;
+        margin: 0 1rem 0 1rem;
+    }
+    .main-card {
+        margin-top: 1rem;
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    .pledge-card-footer,
+    .pledge-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #status-numbers-area {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .status-card {
+        padding-left: 0rem;
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-left: none;
+        border-top: solid 2px gainsboro;
+    }
+    .status-card.left {
+        border-top: none !important;
+        padding-left: 0px !important;
+        margin-left: 0px !important;
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    /* MODAL */
+    h4 {
+        margin: 0;
+    }
+    .pledge-card-modal {
+        background-color: lightgreen;
+        padding: 1rem;
+        grid-template-rows: auto auto 1fr auto minmax(0, auto);
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: "radio heading" "radio pledge" "description description" "remaining ." "footer footer";
+        /* gap: 0px 0px; */
+    }
+    .modal-content {
+        margin-top: 1rem;
+        padding: 2rem;
+        padding: 20px;
+        border: 1px solid hsl(0, 0%, 48%);
+        width: 100%;
+    }
+    .fake-radio {
+        /* grid-area: radio;
+        display: flex;
+        align-items: center;
+        justify-content: center; */
+        margin-right: 0;
+        margin-top: 0;
+    }
+    #main {
+        z-index: 2;
+        margin-top: -3rem;
+    }
+    nav {
+        display: none;
+        padding-right: 0px;
+    }
+}
+
+.fake-radio {
+    grid-area: radio;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+
+.radio-button {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    /* background-color: lightgray; */
+    border-radius: 50px;
+}
+
+.radio-button-outline {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    border: solid lightgray 2px;
+    border-radius: 50px;
+}
+
+.pledge-card-modal.selected .radio-button {
+    background-color: hsl(176, 50%, 47%);
+}
+
+.remaining-amount-area {
+    justify-self: end;
+    display: block;
+    display: flex;
+}
+
+.modal-pledge-card-description {
+    grid-area: description;
 }
 
 .selected {
     border-color: hsl(176, 50%, 47%) !important;
-    border-width: 3px !important;
+    border-width: 2px !important;
 }
 
 .selected .modal-pledge-card-footer {
     display: flex !important;
+    grid-area: footer;
+    /* height: minmax(0, auto); */
 }
 
 .modal-pledge-card-footer {
     display: none;
     justify-content: space-between;
     align-items: center;
-    border-top: solid 1px gray;
+    border-top: solid 1px hsl(0, 0%, 48%);
     margin-top: 1rem;
     padding-top: 1rem;
 }
 
 input.pledge-input {
     padding: 1rem;
-    border: solid 1px;
+    border: solid 1px hsl(0, 0%, 48%);
     border-radius: 25px;
     font-weight: bold;
 }
@@ -333,7 +492,7 @@ div#success {
     margin: 15% auto;
     /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid hsl(0, 0%, 48%);
     width: 70%;
     /* Could be more or less, depending on screen size */
 }
